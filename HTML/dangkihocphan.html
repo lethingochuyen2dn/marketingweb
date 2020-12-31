@@ -1,0 +1,318 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Đăng kí học phần</title>
+<link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+<script type="text/javascript" src="../JS/jquery.min.js"></script>
+<script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+<script>
+	  function ktmssv()
+        {
+            var ten = document.getElementById("mssv").value;
+            if (ten == "") {
+			
+                document.getElementById("loi").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^[0-9]{8}$/;	//sử dụng biểu thức chính qui để kiểm tra 
+				  // gồm 8 chữ số từ 0 đến 9
+                if (regt.test(ten) == false)
+                {
+                    document.getElementById("loi").innerHTML = "*Gồm dãy số có 8 kí tự!!";
+					
+                    return false;
+					
+                }
+                else
+                {
+					
+                    document.getElementById("loi").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+		
+		function dangnhap(){
+				
+				
+			if(ktmssv()){
+				document.getElementById("tc").innerHTML = "Đăng nhập thành công!!!";
+			
+				document.getElementById("xuat1").innerHTML = "";
+				return true;
+			}
+			else{
+			return false;
+			}
+		}
+		function dangki1(){
+			
+			var tc1=0;
+			var tc2=0;
+			var tc3=0;
+			var tc4=0;
+			var tc5=0;
+			var dl1=document.getElementById("1").value;
+			var dl2=document.getElementById("2").value;
+			var dl3=document.getElementById("3").value;
+			var dl4=document.getElementById("4").value;
+			var dl5=document.getElementById("5").value;
+               if(dl1!=""){
+					tc1=5;
+			   }
+			    if(dl2!=""){
+					tc2=7;
+			   }
+			    if(dl3!=""){
+					tc3=6;
+			   }
+			    if(dl4!=""){
+					tc4=8;
+			   }
+			    if(dl5!=""){
+					tc5=7;
+			   }
+				var tong=tc1+tc2+tc3+tc4+tc5;
+				document.getElementById("xuattc").innerHTML = tong;
+				
+				
+				}
+	function dangki(){
+	var tc1=0;
+			var tc2=0;
+			var tc3=0;
+			var tc4=0;
+			var tc5=0;
+			var dl1=document.getElementById("1").value;
+			var dl2=document.getElementById("2").value;
+			var dl3=document.getElementById("3").value;
+			var dl4=document.getElementById("4").value;
+			var dl5=document.getElementById("5").value;
+               if(dl1!=""){
+					tc1=5;
+			   }
+			    if(dl2!=""){
+					tc2=7;
+			   }
+			    if(dl3!=""){
+					tc3=6;
+			   }
+			    if(dl4!=""){
+					tc4=8;
+			   }
+			    if(dl5!=""){
+					tc5=7;
+			   }
+			   var tong=tc1+tc2+tc3+tc4+tc5;
+	
+
+		
+		if(tong<=20&&tong!=0){
+		alert("Đăng kí thành công!!");
+					if(tc1!=0){
+						var s="<tr>"
+						s+="<td>1</td>"
+						s+="<td>Toán</td>"
+						s+="<td>5</td>"
+						s+="<td>3-5</td>"
+						s+="</tr>"
+						document.getElementById("ddk").innerHTML+=s;
+					}
+					if(tc2!=0){
+						var s="<tr>"
+						s+="<td>2</td>"
+						s+="<td>Lý</td>"
+						s+="<td>7</td>"
+						s+="<td>5-9</td>"
+						s+="</tr>"
+						document.getElementById("ddk").innerHTML+=s;
+					}
+					if(tc3!=0){
+						var s="<tr>"
+						s+="<td>3</td>"
+						s+="<td>Hóa</td>"
+						s+="<td>6</td>"
+						s+="<td>4-7</td>"
+						s+="</tr>"
+						document.getElementById("ddk").innerHTML+=s;
+					}
+					if(tc4!=0){
+						var s="<tr>"
+						s+="<td>4</td>"
+						s+="<td>Văn</td>"
+						s+="<td>8</td>"
+						s+="<td>4-8</td>"
+						s+="</tr>"
+						document.getElementById("ddk").innerHTML+=s;
+					}
+					if(tc5!=0){
+						var s="<tr>"
+						s+="<td>5</td>"
+						s+="<td>Anh văn</td>"
+						s+="<td>7</td>"
+						s+="<td>1-9</td>"
+						s+="</tr>"
+						document.getElementById("ddk").innerHTML+=s;
+					}
+	}
+	else{
+		if((tc1==0)&&(tc2==0)&&(tc3==0)&&(tc4==0)&&(tc5==0)){
+		alert("Cần đăng nhập để đăng kí môn học!!!");
+		}
+		else{
+		alert("số tín chỉ phải nhỏ hơn 20");
+		}
+	}
+      }          
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-12">
+				<img style="width:100%;height:20%;" src="../Images/logo1.png"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="trangchu.html">Home</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">Sinh Viên<span class="caret"/></a>
+								<ul class="dropdown-menu">
+									<li><a  href="dangkihocphan.html">Đăng kí học phần</a></li>
+									<li><a  href="ketqua.html">Xem kết quả học tập</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">Giảng Viên<span class="caret"/></a>
+								<ul class="dropdown-menu">
+									
+									<li><a href="nhapdiem.html">Nhập điểm sinh viên</a></li>
+								</ul>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col-md-3">
+				    <!-- Modal -->
+    
+            
+                
+                    
+                    <h2 class="text-danger text-center">Đăng Nhập</h2>
+                
+                                
+                   <form action="/action_page.php">
+                       <div class="form-group">
+                           <label class="text-center text-danger">Nhập mã số sinh viên</label>
+                           <input type="text" class="form-control" id="mssv" onBlur="ktmssv()" ></input>
+                           <span id="loi" class="text-danger">*</span>
+                       </div>
+					    <div class="form-group">
+                           <button type="button" class="btn btn-success btn-block" onClick="dangnhap()"> Đăng nhập</button>
+                       </div>
+                   </form>
+				   
+				   
+				   <div>
+						<h4 id="tc"></h4>
+						
+				   </div>
+              
+                
+            
+
+
+        </div>
+		<div class="col-md-9">
+			<h4>Môn đăng kí</h4>
+			<table class="table" id="xuat">
+				<tr>
+					<th>STT</th>
+					<th>Tên môn</th>
+					<th>Số tín chỉ</th>
+					<th>Tiết</th>
+					<th>Chọn (nhập 1 để chọn)</th>
+				</tr>
+				
+				<tr>
+					<td>1</td>
+					<td>Toán</td>
+					<td>5</td>
+					<td>3-5</td>
+					<td><input type="text" id="1" onBlur="dangki1()"/></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Lý</td>
+					<td>7</td>
+					<td>5-9</td>
+					<td><input type="text" id="2" onBlur="dangki1()"/>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Hóa</td>
+					<td>6</td>
+					<td>4-7</td>
+					<td><input type="text" id="3" onBlur="dangki1()"/></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Văn</td>
+					<td>8</td>
+					<td>4-8</td>
+					<td><input type="text" id="4" onBlur="dangki1()"/></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Anh văn</td>
+					<td>7</td>
+					<td>1-9</td>
+					<td><input type="text" id="5" onBlur="dangki1()"/></td>
+				</tr>
+				
+			</table>
+			<form>
+				
+				<div class="form-group">
+                           <button type="button" class="btn btn-info" onClick="dangki()">Đăng kí môn học</button>
+						   <span>Số Tín chỉ đã đăng kí:</span><span id="xuattc"></span><span> /20</span>
+                       </div>
+			</form>
+			</br>
+			<h4>Môn đã đăng kí</h4>
+			<table class="table" id="ddk">
+				<tr>
+					<th>STT</th>
+					<th>Tên môn</th>
+					<th>Số tín chỉ</th>
+					<th>Tiết</th>
+				</tr>
+			</table>
+			
+		</div>
+
+    </div>
+			
+		
+		<div class="row">
+			<div class="col-md-12 bg-primary">
+				<p class="text-center">@2020 -LTH-TRƯỜNG ĐẠI HỌC SƯ PHẠM ĐÀ NẴNG</p>
+				<p class="text-left " >  Địa chỉ: 459 Tôn Đức Thắng, Hòa Khánh Nam, quận Liên Chiểu, TP. Đà Nẵng</p>
+				<p class="text-left"> 	 Điện thoại: +84-236-3841323 </p>
+				<p class="text-left">    Email: ued@ued.udn.vn</p>				
+			</div>
+		</div>
+    </div>
+</body>
+</html>
+  

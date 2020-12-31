@@ -1,0 +1,317 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Website Admin</title>
+<link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+<script type="text/javascript" src="../JS/jquery.min.js"></script>
+<script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+<script>
+	  function kttoan()
+        {
+            var ten = document.getElementById("toan").value;
+            if (ten == "") {
+			
+                document.getElementById("loi").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^([0-9])$/;	
+                if (regt.test(ten) == false)
+                {
+                    document.getElementById("loi").innerHTML = "Điểm phải nhỏ hơn 10";
+					
+                    return false;
+					
+                }
+                else
+                {
+					
+                    document.getElementById("loi").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+		
+		 function kttoan2()
+        {
+            var ten = document.getElementById("toan2").value;
+            if (ten == "") {
+			
+                document.getElementById("loi2").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^([0-9])$/;	
+                if (regt.test(ten) == false)
+                {
+                    document.getElementById("loi2").innerHTML = "Điểm phải nhỏ hơn 10";
+					
+                    return false;
+					
+                }
+                else
+                {
+					
+                    document.getElementById("loi2").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+		 function kttoan3()
+        {
+            var ten = document.getElementById("toan3").value;
+            if (ten == "") {
+			
+                document.getElementById("loi3").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^([0-9])$/;	
+                if (regt.test(ten) == false)
+                {
+                    document.getElementById("loi3").innerHTML = "Điểm phải nhỏ hơn 10";
+					
+                    return false;
+					
+                }
+                else
+                {
+					
+                    document.getElementById("loi3").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+		
+		function dangnhap(){
+			var t = document.getElementById("toan").value;
+			var t1 = document.getElementById("toan2").value;
+			var t2 = document.getElementById("toan3").value;			
+			var s=0;
+			if(kttoan()&&kttoan2()&&kttoan3()){
+				alert("Nhập điểm thành công!!!");
+				s="<tr>";
+						s+="<td>17068831</td>";
+						s+="<td>Lê Thị Ngọc Huyền</td>";
+						s+="<td>"+t+"</td>";
+						s+="<td>"+t1+"</td>";
+						s+="<td>"+t2+"</td>";
+						s+="</tr>";
+						document.getElementById("diem").innerHTML += s;
+				
+			}
+		}
+		function dangnhap1(){
+			var t = document.getElementById("toan").value;
+			var t1 = document.getElementById("toan2").value;
+			var t2 = document.getElementById("toan3").value;			
+			var s=0;
+			if(kttoan()&&kttoan2()&&kttoan3()){
+				alert("Nhập điểm thành công!!!");
+				s="<tr>";
+						s+="<td>17090211</td>";
+						s+="<td>Trần Thanh Trung/td>";
+						s+="<td>"+t+"</td>";
+						s+="<td>"+t1+"</td>";
+						s+="<td>"+t2+"</td>";
+						s+="</tr>";
+						document.getElementById("diem").innerHTML += s;
+				
+			}
+		}
+		function dangnhap2(){
+			var t = document.getElementById("toan").value;
+			var t1 = document.getElementById("toan2").value;
+			var t2 = document.getElementById("toan3").value;			
+			var s=0;
+			if(kttoan()&&kttoan2()&&kttoan3()){
+				alert("Nhập điểm thành công!!!");
+				s="<tr>";
+						s+="<td>15492142</td>";
+						s+="<td>Trần Thanh Trung/td>";
+						s+="<td>"+t+"</td>";
+						s+="<td>"+t1+"</td>";
+						s+="<td>"+t2+"</td>";
+						s+="</tr>";
+						document.getElementById("diem").innerHTML += s;
+				
+			}
+		}
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-12">
+				<img style="width:100%;height:20%;" src="../Images/logo1.png"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="trangchu.html">Home</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">Sinh Viên<span class="caret"/></a>
+								<ul class="dropdown-menu">
+									<li><a href="dangkihocphan.html">Đăng kí học phần</a></li>
+									<li><a href="ketqua.html">Xem kết quả học tập</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">Giảng Viên<span class="caret"/></a>
+								<ul class="dropdown-menu">
+									
+									<li><a href="nhapdiem.html">Nhập điểm sinh viên</a></li>
+								</ul>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			
+			<div class="col-md-3">
+				    <!-- Modal -->
+    
+            
+                
+                    
+                    <h2>Chọn sinh viên</h2>
+                
+                
+                   <nav class="navbar navbar-default">
+                   <ul class="nav navbar-nav">
+                       
+                       <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chọn sinh viên
+                           <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-toggle="modal" data-target="#myForm">Lê Thị Ngọc Huyền</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#myForm">Trần Thanh Trung</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#myForm">Nguyễn văn chánh</a></li>
+                        </ul>
+                       </li>
+                      
+                   </ul>
+
+               </nav>
+				   
+				  
+              
+                
+            
+
+
+        </div>
+		<div class="col-md-9">
+			<h4>Bảng điểm đã nhập</h4>
+			<table class="table" id="diem">
+				<tr>
+					<th>Mssv</th>
+					<th>Tên</th>
+					<th>Toán</th>
+					<th>Lí</th>
+					<th>Hóa</th>
+				</tr>
+				
+			</table>
+			
+			
+		</div>
+
+   
+			
+		</div>
+		<div class="row" style="margin-top:10px;">
+			<div class="col-md-12 bg-primary navbar-center">
+				<p class="text-center">@2020 -LTH-TRƯỜNG ĐẠI HỌC SƯ PHẠM ĐÀ NẴNG</p>
+				<p class="text-left " >  Địa chỉ: 459 Tôn Đức Thắng, Hòa Khánh Nam, quận Liên Chiểu, TP. Đà Nẵng</p>
+				<p class="text-left"> 	 Điện thoại: +84-236-3841323 </p>
+				<p class="text-left">    Email: ued@ued.udn.vn</p>
+			</div>
+		</div>
+    </div>
+	
+	  <div class="modal fade" role="dialog" id="myForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h1> Nhập điểm sinh viên</h1>
+                </div>
+                <div class="modal-body">
+                   <form>
+                       <div class="form-group">
+                           <label>Toán</label>
+                           <input type="text" class="form-control" id="toan" onBlur="kttoan();" />
+                           <span id="loi" class="text-danger"></span>
+                       </div>
+                      <div class="form-group">
+                           <label>Lí</label>
+                           <input type="text" class="form-control" id="toan2" onBlur="kttoan2();" />
+                           <span id="loi2" class="text-danger"></span>
+                       </div>
+                      <div class="form-group">
+                           <label>Hóa</label>
+                           <input type="text" class="form-control" id="toan3" onBlur="kttoan3();" />
+                           <span id="loi3" class="text-danger"></span>
+                       </div>
+                       <div class="form-group">
+                           <button type="button" class="btn btn-success btn-block" onClick="dangnhap()">Lưu</button>
+                       </div>
+                   </form>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+    </div>
+	
+	
+		  <div class="modal fade" role="dialog" id="myForm1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h1> Nhập điểm sinh viên</h1>
+                </div>
+                <div class="modal-body">
+                   <form>
+                       <div class="form-group">
+                           <label>Toán</label>
+                           <input type="text" class="form-control" id="toan" onBlur="kttoan();" />
+                           <span id="loi" class="text-danger"></span>
+                       </div>
+                      <div class="form-group">
+                           <label>Lí</label>
+                           <input type="text" class="form-control" id="toan2" onBlur="kttoan2();" />
+                           <span id="loi2" class="text-danger"></span>
+                       </div>
+                      <div class="form-group">
+                           <label>Hóa</label>
+                           <input type="text" class="form-control" id="toan3" onBlur="kttoan3();" />
+                           <span id="loi3" class="text-danger"></span>
+                       </div>
+					   
+                       <div class="form-group">
+                           <button type="button" class="btn btn-success btn-block" onClick="dangnhap1()">Lưu</button>
+                       </div>
+                   </form>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
+  
